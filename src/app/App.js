@@ -32,6 +32,8 @@ class App extends React.Component {
         company={stateData.company_name}
         profileImage={stateData.profile_image}
         icon={stateData.icon}
+        phone={stateData.phone}
+        email={stateData.email}
         key={i} />
     );
   }

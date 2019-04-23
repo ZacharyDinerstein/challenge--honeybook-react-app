@@ -21,8 +21,8 @@ export class Card extends React.Component {
 		            </div>
 		            <div className="card__text-container--bottom card__sub-text-container">
 		              <p className="card__phone-num--label">Phone Number</p>
-		              <p className="card__phone-num">123-456-7890</p>
-		              <p className="card__email">email@company.com</p>
+		              <p className="card__phone-num">{this.props.phone}</p>
+		              <p className="card__email">{this.props.email}</p>
 		            </div>
 		          </div>
 		        </div>
