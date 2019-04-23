@@ -8,7 +8,7 @@ export class Card extends React.Component {
 		        <div className="card">
 		          <div className="card__img-wrapper">
 		            <img src="https://s3.amazonaws.com/honeybook_cdn/assets_users_production/users/532b267c46ecaccbf1000143/profile_photos/2014-09-17-22-46-03-442.png" alt="" className="card__img--main" />
-		            <img src="" alt="" className="card__img--stamp" />
+		            <img src="https://s3.amazonaws.com/honeybook_cdn/assets_users_production/companies/532b267c46ecaccbf1000144/icons/2014-10-02-18-59-41-959.png" alt="" className="card__img--icon" />
 		          </div>
 		          <div className="card__text-wrapper">
 		            <div className="card__text-container--top">
