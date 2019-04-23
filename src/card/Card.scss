@@ -7,7 +7,9 @@
   margin-bottom: 2rem;
 
   &:hover {
-    color: red;
+    .card__text-container--bottom {
+      display: block;
+    }
   }
   .card__img-wrapper {
     position: relative;
@@ -35,6 +37,9 @@
       font-size: 1.3rem;
       margin-bottom: .2rem;
     }
+  }
+  .card__text-container--bottom {
+    display: none;
   }
   .card__sub-text-container {
     color: $gray-text;
