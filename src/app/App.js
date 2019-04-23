@@ -18,12 +18,10 @@ class App extends React.Component {
     let cards = [];
 
     for (let i = 0; i < this.state.numOfCards; i++){
-      cards.push(this.renderCard(i))
+      cards.push(this.renderCard(i));
     }
 
-    return (
-      cards
-    )
+    return cards;
   }
 
   renderCard(i){
