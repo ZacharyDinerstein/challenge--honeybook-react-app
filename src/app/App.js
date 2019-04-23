@@ -7,8 +7,10 @@ function App() {
     <div className="card-container">
       <div className="row">
         <div className="card col-sm-12 col-md-3">
-          <img src="" alt="" className="card__img--main" />
-          <img src="" alt="" className="card__img--stamp" />
+          <div className="card__img-wrapper">
+            <img src="" alt="" className="card__img--main" />
+            <img src="" alt="" className="card__img--stamp" />
+          </div>
           <div className="card__text-wrapper">
             <div className="card__text-container--top">
               <h2 className="card__name">Full Name</h2>
