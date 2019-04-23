@@ -1,0 +1,116 @@
+/*VARIABLES*/
+
+/* COLORS */
+$brand-teal: rgb(130, 216, 216);
+$purple-offset: rgba(219, 214, 227, .9);
+$purple-font: rgb(55, 49, 66);
+
+
+$white: #fafafa;
+$white-hover: #e9e9e9;
+$black: #111;
+$gray-text: rgba(17, 17, 17, .5);
+$dark-navbar: rgba(52, 58, 64, 1);
+$dark-navbar-hover: #7c7c7c;
+$gray-background: #edecec70;
+
+
+/*Gradients*/
+$gradient: linear-gradient(141deg, #3690ff 0%, #8383ff 100%);
+$background-gradient: linear-gradient(to right, rgb(82, 71, 99) 0%, rgb(55, 49, 66) 100%);
+
+/*SHADOWS*/
+$light-box-shadow: rgba(10, 10, 10, 0.2);
+
+/* TEXT */
+$navbar-text-size: 1.7rem;
+$navbar-brand-text-size: 2rem;
+
+
+/*FONTS*/
+$title-font: 'Roboto', sans-serif;
+$body-font: 'Open Sans', sans-serif;
+
+/*POLYGON*/
+$main-img-slant: polygon(0% 0%, 100% 0, 100% 91%, 0 100%);
+
+
+
+/*GENERAL*/
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $white;
+  color: $black;
+  font-size: 10px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+
+/*CARD*/
+.card {
+  font-size: 1rem;
+  padding:1rem;
+  .card__img--main {
+    width: 100%;
+    min-height: 10rem;
+  }
+  .card__name {
+    font-size: 1.5rem;
+    margin-bottom: .2rem;
+  }
+  .card__sub-text-container {
+    color: $gray-text;
+    p {
+      display: inline-block;
+      margin-right: .2rem;
+      margin-bottom: 0rem;
+    }
+  }
+
+}
+
+
+/*APP*/
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
