@@ -2,8 +2,9 @@ import React from 'react';
 import logo from '../logo.svg';
 import './App.scss';
 import '../card/Card.scss';
+import '../header/Header.scss';
 import { Card } from '../card/Card.js';
-
+import { Header } from '../header/Header.js';
 
 class App extends React.Component {
 
@@ -41,10 +42,17 @@ class App extends React.Component {
 
   render(){
     return (
-      <div className="card-container">
-        <div className="row">
-          {this.renderCards()}
-        </div>
+      <div>
+        <Header />
+        <main>
+          <div className="container">
+            <div className="card-container">
+              <div className="row">
+                {this.renderCards()}
+              </div>
+            </div>
+          </div>
+        </main>
       </div>
     );
   }

@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 export class Card extends React.Component {
 	render(){
 		return (
-			<div className="col-sm-6  col-lg-3">
+			<div className="col-sm-6 col-lg-3">
 		        <div className="card">
 		          <div className="card__img-wrapper">
 		            <img src={this.props.profileImage} alt="" className="card__img--profile-image" />
