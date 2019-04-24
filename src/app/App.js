@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from '../logo.svg';
 import './App.scss';
 import '../card/Card.scss';
 import '../header/Header.scss';
@@ -39,7 +38,6 @@ class App extends React.Component {
 
     return cards;
   }
-
 
 
   // Once App component mounts, 

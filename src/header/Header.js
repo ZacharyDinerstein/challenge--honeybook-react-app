@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import '../searchBar/SearchBar.scss';
 import { SearchBar } from '../searchBar/SearchBar.js';
 
