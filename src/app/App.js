@@ -2,6 +2,7 @@ import React from 'react';
 import logo from '../logo.svg';
 import './App.scss';
 import '../card/Card.scss';
+import '../searchBar/SearchBar.scss';
 import '../header/Header.scss';
 import { Card } from '../card/Card.js';
 import { Header } from '../header/Header.js';

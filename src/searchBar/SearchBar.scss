@@ -1,0 +1,27 @@
+@import "../_variables.scss";
+
+/* FORMS */
+
+.search-bar { 
+	height: 100%;
+	input {
+		width: 100%;
+		height: 100%;
+		padding: .72rem 1rem;
+		font-size: 1.1rem;
+		color: $black;
+		&::-webkit-input-placeholder { 
+		  color: $light-gray-text;
+		}
+		&::-moz-placeholder { /* Firefox 19+ */
+		  color: $light-gray-text;
+		}
+		&:-ms-input-placeholder { /* IE 10+ */
+		  color: $light-gray-text;
+		}
+		&:-moz-placeholder { /* Firefox 18- */
+		  color: $light-gray-text;
+		}
+	}
+}
+
