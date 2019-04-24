@@ -57,8 +57,18 @@ class App extends React.Component {
 
       newList = currentList.filter(profile => {
 
-        // change current profile to lowercase
-        const lcValues = JSON.stringify( Object.values(profile) ).toLowerCase();
+        let profileAsString = '';
+
+        // Convert all values in profile objects into a strings
+        // We'll check our search filter against that string
+        for ( var key in profile ) {  
+          if (key !== "icon" && key !== "profile_image"){
+
+            //
+            profileAsString +=  ' ' + profile[key].toLowerCase();
+          }
+        }
+
 
         // change search term to lowercase
         const filter = e.target.value.toLowerCase();
