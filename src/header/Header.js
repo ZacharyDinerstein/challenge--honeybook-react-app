@@ -13,7 +13,7 @@ export class Header extends React.Component {
 							<h1>Contact List</h1>
 						</div>
 						<div className="col-sm-5">
-							<SearchBar />
+							<SearchBar handleChange={this.props.handleChange} />
 						</div>
 					</div>
 				</header>
