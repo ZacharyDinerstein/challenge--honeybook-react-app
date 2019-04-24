@@ -70,7 +70,6 @@ class App extends React.Component {
           }
         }
 
-
         // change search term to lowercase
         const filter = e.target.value.toLowerCase();
 
@@ -94,15 +93,13 @@ class App extends React.Component {
     return (
       <div>
         <Header handleChange={this.handleChange} />
-        <main>
           <div className="container">
-            <div className="card-container">
+            <main className="card-container">
               <div className="row">
                 {this.renderCards()}
               </div>
-            </div>
+            </main>
           </div>
-        </main>
       </div>
     );
   }
