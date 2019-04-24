@@ -7,21 +7,28 @@
 	input {
 		width: 100%;
 		height: 100%;
-		padding: .72rem 1rem;
+		padding: .72rem 2.5rem .72rem 1rem;
 		font-size: 1.1rem;
 		color: $black;
 		&::-webkit-input-placeholder { 
-		  color: $light-gray-text;
+		  color: $light-gray-text-2;
 		}
 		&::-moz-placeholder { /* Firefox 19+ */
-		  color: $light-gray-text;
+		  color: $light-gray-text-2;
 		}
 		&:-ms-input-placeholder { /* IE 10+ */
-		  color: $light-gray-text;
+		  color: $light-gray-text-2;
 		}
 		&:-moz-placeholder { /* Firefox 18- */
-		  color: $light-gray-text;
+		  color: $light-gray-text-2;
 		}
+	}
+	.fa-search {
+		position: absolute;
+	    top: 35%;
+	    right: 2rem;
+	    font-size: 1.1rem;
+	    color: $light-gray-text-5;
 	}
 }
 

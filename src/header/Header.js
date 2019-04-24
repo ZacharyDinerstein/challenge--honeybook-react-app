@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import '../searchBar/SearchBar.scss';
 import { SearchBar } from '../searchBar/SearchBar.js';
 
+
 export class Header extends React.Component {
 	render(){
 		return (
