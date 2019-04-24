@@ -62,9 +62,10 @@ class App extends React.Component {
         // Convert all values in profile objects into a strings
         // We'll check our search filter against that string
         for ( var key in profile ) {  
-          if (key !== "icon" && key !== "profile_image"){
 
-            //
+          // Don't include any image values in our profile string.
+          // Because they contain so many characters, they could mess up our search.
+          if (key !== "icon" && key !== "profile_image"){
             profileAsString +=  ' ' + profile[key].toLowerCase();
           }
         }
@@ -76,7 +77,7 @@ class App extends React.Component {
         // check to see if the current list profile includes the search term
         // If it does, it will be added to newList. Using lowercase eliminates
         // issues with capitalization in search terms and search content
-        return lcValues.includes(filter);
+        return profileAsString.includes(filter);
       });
 
     } else {
