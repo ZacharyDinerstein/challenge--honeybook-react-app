@@ -22,24 +22,20 @@ class App extends React.Component {
   renderCards(){
     let cards = [];
 
-    this.state.data.map((item, index) => (
+    this.state.filteredData.map((item, index) => (
         cards.push(
           <Card
-          name={item.name}
-          job={item.job}
-          company={item.company_name}
-          profileImage={item.profile_image}
-          icon={item.icon}
-          phone={item.phone}
-          email={item.email}
-          key={index} />
+            name={item.name}
+            job={item.job}
+            company={item.company_name}
+            profileImage={item.profile_image}
+            icon={item.icon}
+            phone={item.phone}
+            email={item.email}
+            key={index} />
         )
       )
     )
-
-    // for (let i = 0; i < this.state.filteredData.length; i++){
-    //   cards.push(this.renderCard(i, this.state.data[i]));
-    // }
 
     return cards;
   }
@@ -52,6 +48,12 @@ class App extends React.Component {
       console.log(this.state.filteredData);
     });
   }
+
+  // componentWillReceiveProps(nextProps) {
+  //   this.setState({
+  //     filteredData: nextProps.data
+  //   });
+  // }
 
 
   handleChange(e) {
@@ -78,9 +80,9 @@ class App extends React.Component {
 
     this.setState({
       filteredData: newList
+    }, function () {
+      console.log(this.state.filteredData);
     });
-
-    console.log(this.state.filteredData)
   }
 
 
