@@ -44,16 +44,8 @@ class App extends React.Component {
   componentDidMount() {
     this.setState({
       filteredData: this.state.data
-    }, function () {
-      console.log(this.state.filteredData);
     });
   }
-
-  // componentWillReceiveProps(nextProps) {
-  //   this.setState({
-  //     filteredData: nextProps.data
-  //   });
-  // }
 
 
   handleChange(e) {
@@ -64,14 +56,17 @@ class App extends React.Component {
       currentList = this.state.data;
 
       newList = currentList.filter(profile => {
+
         // change current profile to lowercase
-        const lcName = profile.name.toLowerCase();
+        const lcValues = JSON.stringify( Object.values(profile) ).toLowerCase();
+
         // change search term to lowercase
         const filter = e.target.value.toLowerCase();
+
         // check to see if the current list profile includes the search term
         // If it does, it will be added to newList. Using lowercase eliminates
         // issues with capitalization in search terms and search content
-        return lcName.includes(filter);
+        return lcValues.includes(filter);
       });
 
     } else {
@@ -80,8 +75,6 @@ class App extends React.Component {
 
     this.setState({
       filteredData: newList
-    }, function () {
-      console.log(this.state.filteredData);
     });
   }
 
