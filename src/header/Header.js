@@ -1,6 +1,6 @@
 import React from 'react';
-import '../searchBar/SearchBar.scss';
-import { SearchBar } from '../searchBar/SearchBar.js';
+import './searchBar/SearchBar.scss';
+import { SearchBar } from './searchBar/SearchBar.js';
 
 
 export class Header extends React.Component {
