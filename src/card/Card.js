@@ -21,33 +21,10 @@ export class Card extends React.Component {
 			divider = <p className="card__text--divider">|</p>;
 		}
 
-		if (!this.props.job) {
-			jobTitle = '';
-		} else {
-			jobTitle = <p className="card__job-title">{this.props.job}</p>;
-		}
-
-		if (!this.props.company) {
-			companyName = '';
-		} else {
-			companyName = <p className="card__company-name">{this.props.company}</p>;
-		}
-
-		if (!this.props.phone) {
-			phoneBlock = '';
-		} else {
-			phoneBlock = <div className="card__phone-num-wrapper"><p className="card__phone-num--label">Phone Number</p><p className="card__phone-num">{this.props.phone}</p></div>;
-		}
-
-		if (!this.props.email) {
-			email = '';
-		} else {
-			email = <p className="card__email">{this.props.email}</p>;
-		}
-
-		console.log(this.props.job.length)
-
-
+		jobTitle = (!this.props.job) ? '' : <p className="card__job-title">{this.props.job}</p>;
+		companyName = (!this.props.company) ? '' : <p className="card__company-name">{this.props.company}</p>;
+		phoneBlock = (!this.props.phone) ? '' : <div className="card__phone-num-wrapper"><p className="card__phone-num--label">Phone Number</p><p className="card__phone-num">{this.props.phone}</p></div>;
+		email = (!this.props.email) ? '' : <p className="card__email">{this.props.email}</p>;
 
 		return (
 			<div className="col-sm-6 col-lg-3">
