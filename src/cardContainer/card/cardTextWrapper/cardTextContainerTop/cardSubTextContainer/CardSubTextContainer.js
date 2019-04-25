@@ -1,9 +1,7 @@
 import React from 'react';
-import CardName from './cardName/CardName.js';
-import CardSubTextContainer from './cardSubTextContainer/CardSubTextContainer.js';
 
 
-const CardTextContainerTop = props => {
+const CardSubTextContainer = props => {
 
 	let divider;
 	let jobTitle;
@@ -22,11 +20,12 @@ const CardTextContainerTop = props => {
 
 
 	return (
-		<div className="card__text-container--top">
-			<CardName name={props.name} />
-			<CardSubTextContainer job={props.job} company={props.company} />
+		<div className="card__sub-text-container">
+			{jobTitle}
+			{divider}
+			{companyName}
 		</div>
 	);
 }
 
-export  default CardTextContainerTop
+export  default CardSubTextContainer
