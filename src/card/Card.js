@@ -19,11 +19,12 @@ export class Card extends React.Component {
 		});
 	}
 
-	componentDidMount() {
-		console.log(this.myRef.current);
-	}
+	// componentWillMount() {
+	// 	console.log(this.myRef.current.children[1].children[0].children[1].offsetHeight)
+	// }
 
 	render(){
+		// console.log(this.checkHeight())
 		const hoverClass = this.state.isHovered ? "card hovering" : "card";
 
 		let divider;
@@ -32,7 +33,11 @@ export class Card extends React.Component {
 		let phoneBlock;
 		let email;
 
-		if (!this.props.job || !this.props.company) {
+		const line = this.props.job.length + this.props.company.length + 3;
+		console.log(line)
+		console.log('BREAK')
+
+		if (!this.props.job || !this.props.company || line > 31) {
 			divider = '';
 		} else {
 			divider = <p className="card__text--divider">|</p>;
@@ -53,7 +58,7 @@ export class Card extends React.Component {
 		if (!this.props.phone) {
 			phoneBlock = '';
 		} else {
-			phoneBlock = <div class="card__phone-num-wrapper"><p className="card__phone-num--label">Phone Number</p><p className="card__phone-num">{this.props.phone}</p></div>;
+			phoneBlock = <div className="card__phone-num-wrapper"><p className="card__phone-num--label">Phone Number</p><p className="card__phone-num">{this.props.phone}</p></div>;
 		}
 
 		if (!this.props.email) {
@@ -61,6 +66,10 @@ export class Card extends React.Component {
 		} else {
 			email = <p className="card__email">{this.props.email}</p>;
 		}
+
+		console.log(this.props.job.length)
+
+
 
 		return (
 			<div className="col-sm-6 col-lg-3">
