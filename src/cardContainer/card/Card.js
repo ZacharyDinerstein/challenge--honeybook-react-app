@@ -11,6 +11,7 @@ export class Card extends React.Component {
 				<div className="card">
 					<CardImgWrapper profileImage={this.props.profileImage} icon={this.props.icon} />
 					<CardTextWrapper name={this.props.name} job={this.props.job} company={this.props.company} phone={this.props.phone} email={this.props.email} />
+					<div className="card__cover"></div>
 				</div>
 			</div>
 		);
