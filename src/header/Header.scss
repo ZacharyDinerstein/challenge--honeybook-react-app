@@ -4,10 +4,25 @@ header {
 	background: white;
 	width: 100%;
 	padding: 1.4rem 0rem;
+
+	/*On Mobile*/
+	@media (max-width: 575px) {
+		padding: 1rem;
+	}
 	margin-bottom: 3rem;
 	box-shadow: $shadow;
 
 	h1 {
 		margin-bottom: 0rem;
+		
+		/*On Tablet */
+		@media (max-width: 992px) {
+			font-size: 2rem;
+		}
+		/*On Mobile*/
+		@media (max-width: 575px) {
+			margin-bottom: 1rem;
+		}
 	}
+
 }
