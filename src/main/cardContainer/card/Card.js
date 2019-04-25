@@ -1,4 +1,5 @@
 import React from 'react';
+import { CardImgWrapper } from './cardImgWrapper/CardImgWrapper.js';
 
 export class Card extends React.Component {
 	render(){
@@ -24,10 +25,7 @@ export class Card extends React.Component {
 		return (
 			<div className="col-sm-6 col-lg-3">
 				<div className="card">
-					<div className="card__img-wrapper">
-						<img src={this.props.profileImage} alt="" className="card__img--profile-image" />
-						<img src={this.props.icon} alt="" className="card__img--icon" />
-					</div>
+					<CardImgWrapper />
 					<div className="card__text-wrapper">
 						<div className="card__text-container--top">
 							<h2 className="card__name">{this.props.name}</h2>
