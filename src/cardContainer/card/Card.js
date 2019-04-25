@@ -10,7 +10,7 @@ export class Card extends React.Component {
 			<div className="col-sm-6 col-lg-3">
 				<div className="card">
 					<CardImgWrapper profileImage={this.props.profileImage} icon={this.props.icon} />
-					<CardTextWrapper name={this.props.name} job={this.props.job} company={this.props.company} phone={this.props.phone} email={this.props.email}/>
+					<CardTextWrapper name={this.props.name} job={this.props.job} company={this.props.company} phone={this.props.phone} email={this.props.email} />
 				</div>
 			</div>
 		);
