@@ -2,8 +2,8 @@ import React from 'react';
 
 const CardJobTitle = props => {
 
-	let jobTitle;
-	return jobTitle = (!props.job) ? '' : <p className="card__job-title">{props.job}</p>;
+	let jobTitle= (!props.job) ? '' : <p className="card__job-title">{props.job}</p>;
+	return jobTitle;
 
 }
 
