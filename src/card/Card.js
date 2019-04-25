@@ -4,29 +4,9 @@ export class Card extends React.Component {
 	constructor(props) {
 		super(props);
 		this.myRef = React.createRef();
-
-		this.state = {
-			hover: false,
-			topTextWrapping: false
-		};
-
-		this.handleHover = this.handleHover.bind(this);
 	}
-
-	handleHover(){
-		this.setState({
-			isHovered: !this.state.isHovered
-		});
-	}
-
-	// componentWillMount() {
-	// 	console.log(this.myRef.current.children[1].children[0].children[1].offsetHeight)
-	// }
 
 	render(){
-		// console.log(this.checkHeight())
-		const hoverClass = this.state.isHovered ? "card hovering" : "card";
-
 		let divider;
 		let jobTitle;
 		let companyName;
@@ -34,8 +14,6 @@ export class Card extends React.Component {
 		let email;
 
 		const line = this.props.job.length + this.props.company.length + 3;
-		console.log(line)
-		console.log('BREAK')
 
 		if (!this.props.job || !this.props.company || line > 31) {
 			divider = '';
