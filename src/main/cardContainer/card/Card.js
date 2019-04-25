@@ -1,11 +1,6 @@
 import React from 'react';
 
 export class Card extends React.Component {
-	constructor(props) {
-		super(props);
-		this.myRef = React.createRef();
-	}
-
 	render(){
 		let divider;
 		let jobTitle;
@@ -28,7 +23,7 @@ export class Card extends React.Component {
 
 		return (
 			<div className="col-sm-6 col-lg-3">
-				<div ref={this.myRef} className="card" onMouseEnter={this.handleHover} onMouseLeave={this.handleHover}>
+				<div className="card">
 					<div className="card__img-wrapper">
 						<img src={this.props.profileImage} alt="" className="card__img--profile-image" />
 						<img src={this.props.icon} alt="" className="card__img--icon" />
