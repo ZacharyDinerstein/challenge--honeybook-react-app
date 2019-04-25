@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.scss';
-import '../card/Card.scss';
 import '../header/Header.scss';
-import { Card } from '../card/Card.js';
+import '../cardContainer/CardContainer.scss';
 import { Header } from '../header/Header.js';
+import CardContainer from '../cardContainer/CardContainer.js';
 
 class App extends React.Component {
 
@@ -15,28 +15,6 @@ class App extends React.Component {
     };
 
     this.handleChange = this.handleChange.bind(this);
-  }
-
-
-  renderCards(){
-    let cards = [];
-
-    this.state.filteredData.map((item, index) => (
-        cards.push(
-          <Card
-            name={item.name}
-            job={item.job}
-            company={item.company_name}
-            profileImage={item.profile_image}
-            icon={item.icon}
-            phone={item.phone}
-            email={item.email}
-            key={index} />
-        )
-      )
-    )
-
-    return cards;
   }
 
 
@@ -107,13 +85,7 @@ class App extends React.Component {
     return (
       <div>
         <Header handleChange={this.handleChange} />
-          <div className="container">
-            <main className="card-container">
-              <div className="row">
-                {this.renderCards()}
-              </div>
-            </main>
-          </div>
+        <CardContainer filteredData={this.state.filteredData} />
       </div>
     );
   }
