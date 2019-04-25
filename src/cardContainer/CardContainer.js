@@ -1,6 +1,6 @@
 import React from 'react';
-import '../card/Card.scss';
-import { Card } from '../card/Card.js';
+import './card/Card.scss';
+import { Card } from './card/Card.js';
 
 
 // export class CardContainer extends React.Component {
