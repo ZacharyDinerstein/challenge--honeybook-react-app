@@ -1,6 +1,6 @@
 import React from 'react';
 import CardName from './cardName/CardName.js';
-import CardSubTextContainer from './cardSubTextContainer/CardSubTextContainer.js';
+import { CardSubTextContainer } from './cardSubTextContainer/CardSubTextContainer.js';
 
 
 const CardTextContainerTop = props => {
