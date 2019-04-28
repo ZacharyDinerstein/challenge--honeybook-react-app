@@ -55,12 +55,9 @@ class App extends React.Component {
 
         // Take the data that will form the contents of our Cards
         // and convert that data into one giant string.
-        // (Leave out data referring to images, as users don't
-        // want to search for cards based on random letters that
-        // are included in an img's src url.)
-        
-        // Later, we'll search our giant string for the value a user entered into
-        // our search bar.  
+        // (Leave out data referring to images, as we don't want users
+        // searching for cards based on the random letters included
+        // in an img's src url.)
 
         let profileAsString = '';
         for ( var key in profile ) {  
@@ -83,7 +80,7 @@ class App extends React.Component {
     } else {
 
       // If a user's search doens't match the contents of
-      // any Card, display all cards.
+      // any Card, display all Cards on screen.
       newList = this.state.data;
     }
 
