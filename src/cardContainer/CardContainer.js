@@ -8,6 +8,9 @@ const CardContainer = props => {
 	return (
 		<main className="card-container container">
 			<div className="row">
+
+				// Display Cards on page based on the 
+				// contents of state.filteredData
 				{props.filteredData.map((item, index) => {
 					return (
 						<Card
@@ -21,6 +24,7 @@ const CardContainer = props => {
 							key={index} />
 					
 				)})}
+
 			</div>
 		</main>
 	);

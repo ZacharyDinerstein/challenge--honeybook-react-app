@@ -21,10 +21,9 @@ class App extends React.Component {
   }
 
 
-  // Once App component mounts, 
-  // grab all our data from the url below
-  // and attach that data to state.data.
-  // Then set filteredData to the contents of state.data.
+  // Grab our JSON data and attach that data to state.data.
+  // Then, set filteredData to state.data.
+  // We'll use filteredData to render our cards.
 
   componentDidMount() {
     fetch("https://candidate-test.herokuapp.com/contacts")
@@ -43,6 +42,8 @@ class App extends React.Component {
   }
 
 
+  // Updated what Cards we show based on User's search
+  // in the search bar
 
   handleChange(e) {
     let currentList = [];
@@ -53,29 +54,37 @@ class App extends React.Component {
 
       newList = currentList.filter(profile => {
 
+        // Take the data that will form the contents of our Cards
+        // and convert that data into one giant string.
+        // (Leave out data referring to images, as users don't
+        // want to search for cards based on random letters that
+        // are included in an img's src url.)
+        
+        // Later, we'll search our giant string for the value a user entered into
+        // our search bar.  
+
         let profileAsString = '';
-
-        // Convert all values in profile objects into a strings
-        // We'll check our search filter against that string
         for ( var key in profile ) {  
-
-          // Don't include any image values in our profile string.
-          // Because they contain so many characters, they could mess up our search.
           if (key !== "icon" && key !== "profile_image"){
             profileAsString +=  ' ' + profile[key].toLowerCase();
           }
         }
 
-        // change search term to lowercase
+        // Change search term to lowercase
+        // (Searching only with lowercase characters eliminates 
+        // any possible capitalization conflicts.)
         const filter = e.target.value.toLowerCase();
 
-        // check to see if the current list profile includes the search term
-        // If it does, it will be added to newList. Using lowercase eliminates
-        // issues with capitalization in search terms and search content
+        // Check to see if a Card's contents includes the User's search term.
+        // If it does, Card contents will be added to newList 
+        // and eventually displayed on screen. 
         return profileAsString.includes(filter);
       });
 
     } else {
+
+      // If a user's search doens't match the contents of
+      // any Card, display all cards.
       newList = this.state.data;
     }
 
