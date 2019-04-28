@@ -2,7 +2,6 @@ import React from 'react';
 
 import './App.scss';
 import '../header/Header.scss';
-import '../cardContainer/CardContainer.scss';
 import { Header } from '../header/Header.js';
 import CardContainer from '../cardContainer/CardContainer.js';
 
