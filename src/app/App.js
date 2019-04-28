@@ -1,9 +1,12 @@
 import React from 'react';
+
 import './App.scss';
 import '../header/Header.scss';
 import '../cardContainer/CardContainer.scss';
 import { Header } from '../header/Header.js';
 import CardContainer from '../cardContainer/CardContainer.js';
+
+
 
 class App extends React.Component {
 
@@ -38,6 +41,7 @@ class App extends React.Component {
       });
      })
   }
+
 
 
   handleChange(e) {
@@ -80,7 +84,6 @@ class App extends React.Component {
     });
   }
 
-
   render(){
     return (
       <div>
@@ -90,5 +93,6 @@ class App extends React.Component {
     );
   }
 }
+
 
 export default App;
