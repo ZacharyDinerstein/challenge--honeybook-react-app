@@ -17,7 +17,7 @@ export class CardSubTextContainer extends React.Component {
 	componentDidMount() {
 		const textContainerheight = this.myRef.current.offsetHeight;
 
-		if (textContainerheight > 25){
+		if (textContainerheight > 24){
 			this.setState({
 				textContainerIsMultiLine: true
 			});
