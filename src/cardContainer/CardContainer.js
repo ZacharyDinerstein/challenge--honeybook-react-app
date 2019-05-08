@@ -4,12 +4,15 @@ import { Card } from './card/Card.js';
 
 
 const CardContainer = props => {
+	let loadingElem = (props.filteredData.length === 0) ? <h2 className='loading'>Loading Profiles...</h2> : '';
+
 
 	// Display Cards on page based on the 
 	// contents of state.filteredData
 	return (
 		<main className="card-container container">
 			<div className="row">
+				{loadingElem}
 				{props.filteredData.map((item, index) => {
 					return (
 						<Card

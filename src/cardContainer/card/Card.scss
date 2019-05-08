@@ -1,5 +1,10 @@
 @import "../../_variables.scss";
 
+.loading {
+	text-align: center;
+	margin: 0 auto;
+}
+
 /*CARD*/
 .card {
 	font-size: $body-font-size-5;
